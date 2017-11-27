@@ -1,0 +1,17 @@
+{
+  "name": "player-demo",
+  "homepage": "none",
+  "authors": [
+    "HermitF <fantasrulai@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

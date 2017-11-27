@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Firebase + Plyr (For 張廷)</title>
+    <meta name="description" content="A simple HTML5 media player with custom controls and WebVTT captions.">
+    <meta name="author" content="Sam Potts">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="bower_components/plyr/dist/plyr.css">
+
+    <!-- Docs styles -->
+    <link rel="stylesheet" href="bower_components/plyr/demo/dist/demo.css">
+
+    <!-- Preload -->
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="https://cdn.plyr.io/static/fonts/avenir-medium.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="https://cdn.plyr.io/static/fonts/avenir-bold.woff2">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Plyr + Firebase</h1>
+        <p>A simple, accessible HTML5 media player and Firebase BaaS for 張廷</p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://github.com/imfeng" target="_blank" class="btn btn--large btn--primary" data-shr-network="github">
+                        <svg class="icon">
+                            <use xlink:href="#icon-github" />
+                        </svg>Download on GitHub
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main" id="main">
+        <nav class="btn__bar">
+            <ul>
+                <li>
+                    <button fire-video="1" type="button" class="btn">Video-1</button>
+                </li>
+                <li >
+                    <button fire-video="2" type="button" class="btn">Video-2</button>
+                </li>
+                <li >
+                    <button fire-video="3" type="button" class="btn">Video-3</button>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <video controls crossorigin>
+
+            </video>
+        </section>
+    </main>
+
+    <!-- Plyr core script -->
+    <script src="bower_components/plyr/dist/plyr.js"></script>
+
+    <!-- Docs script -->
+    <script src="src/js/main.js"></script>
+
+    <!-- Rangetouch to fix <input type="range"> on touch devices (see https://rangetouch.com) -->
+    <script src="https://cdn.rangetouch.com/1.0.1/rangetouch.js" async></script>
+
+    <!-- Sharing libary (https://shr.one) -->
+    <script src="https://cdn.shr.one/1.0.1/shr.js"></script>
+    <script>
+        if (window.shr) { window.shr.setup({ count: { classname: 'btn__count' } }); }
+    </script>
+</body>
+
+</html>
