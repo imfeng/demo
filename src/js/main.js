@@ -3,12 +3,12 @@ const FIREBASE_STORAGE_URL = 'gs://firebee-95773.appspot.com/videos/video_';// F
 
 // General functions
 (function() {
-    document.body.addEventListener('ready', function(event) { 
+    /*document.body.addEventListener('ready', function(event) { 
         //console.log(event);
-        console.log('RUN!');
-        fireInit();
-    });
-
+        
+    });*/
+    console.log('RUN!');
+    fireInit();
     // Firebase Functions
     var storage, user;
     function fireInit(){
